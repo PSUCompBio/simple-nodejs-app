@@ -1,0 +1,10 @@
+{
+  "name": "simple-nodejs-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/PSUCompBio/simple-nodejs-app.git",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
