@@ -12,7 +12,8 @@ a simple node js app
 
 ### from ec2 instance used to build docker image
 
+- after the inital start up, you might want to check the startup logs to check for errors: vi /var/log/cloud-init-output.log
 - login to aws: aws configure
-- login to ecr: sudo $(aws ecr get-login --region us-east-1 --no-include-email)
+- login to ecr: sudo \$(aws ecr get-login --region us-east-1 --no-include-email)
 - tag docker image: sudo docker tag <ImageID> <AwsAccountID>.dkr.ecr.us-east-1.amazonaws.com/nodetest
 - push docker to ecr: sudo docker push <AWS-Account-ID>.dkr.ecr.us-east-1.amazonaws.com/clinicalimg

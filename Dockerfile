@@ -15,15 +15,10 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | b
 RUN . ~/.nvm/nvm.sh
 
 # set up nodejs
-# #RUN /bin/bash bash_scripts/install-simple-nodejs-app.sh
-# expose port 3000 for API
 EXPOSE 3000
-RUN mkdir /var/www
-RUN mkdir /var/www/simple-nodejs-app
-ADD *.js /var/www/simple-nodejs-app/
-ADD README.md /var/www/simple-nodejs-app/
-ADD package.json /var/www/simple-nodejs-app/
-RUN cd /var/www/simple-nodejs-app/
+ADD *.js ./
+ADD README.md ./
+ADD package*.json ./
 RUN curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo
 RUN curl -sL https://rpm.nodesource.com/setup_12.x |  bash -
 RUN yum -y install yarn
