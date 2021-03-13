@@ -21,7 +21,6 @@ EXPOSE 3000
 RUN mkdir /var/www
 RUN mkdir /var/www/simple-nodejs-app
 ADD *.js /var/www/simple-nodejs-app/
-ADD config /var/www/simple-nodejs-app/config
 ADD README.md /var/www/simple-nodejs-app/
 ADD package.json /var/www/simple-nodejs-app/
 RUN cd /var/www/simple-nodejs-app/
