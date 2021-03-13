@@ -12,4 +12,4 @@ git clone https://github.com/PSUCompBio/simple-nodejs-app.git
 cd simple-nodejs-app
 sudo docker build  --build-arg UNAMEX=ec2-user -t nodetest .
 cd /home/$UNAMEX
-sudo chown -R $UNAMEX \*
+sudo chown -R $UNAMEX *
