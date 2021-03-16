@@ -16,5 +16,6 @@ a simple node js app
 - Login to aws: aws configure
 - Login to ecr: sudo $(aws ecr get-login --region us-east-1 --no-include-email)
 - Tag docker image: sudo docker tag <ImageID> <AwsAccountID>.dkr.ecr.us-east-1.amazonaws.com/nodetest
+-- Note: you can go to AWS ECR repos to get URL above.
 - Push docker to ecr: sudo docker push <AWS-Account-ID>.dkr.ecr.us-east-1.amazonaws.com/
-- Update lambda function with latest docker image
+- Update lambda function with latest docker image (this has to be done manually)
